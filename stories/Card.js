@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import { options } from "./constants";
+import "../styles/token.css";
 
 export const Card = ({
   children = "I'm card",
   color = "primary",
   size = "sm",
 }) => {
-  return <div>{children}</div>;
+  return <div className="card">{children}</div>;
 };
 
 Card.propTypes = {
