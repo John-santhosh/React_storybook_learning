@@ -1,10 +1,5 @@
-.card {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  padding: 12px 12px;
-  border: 1px solid tomato;
-  border-radius: 10px;
-  box-shadow: 1px -0px 5px rgba(0, 0, 0, 0.296);
-  transition: box-shadow 0.2s ease-in;
+:root {
+  --color-primary: #9879e9;
+  --color-secondary: #eb2d52;
+  --box-shadow-sm: 0 4px 5px rgba(0, 0, 0, 0.07);
 }

@@ -15,5 +15,5 @@ export const Colors = () =>
 
 export const Sizes = () =>
   options.sizes.map((size, index) => {
-    return <Card key={index} sizes={size} />;
+    return <Card key={index} size={size} />;
   });

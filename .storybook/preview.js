@@ -1,5 +1,6 @@
-import 'minireset.css'
-import "../styles/styles.css"
+import "minireset.css";
+import "../styles/global.css";
+import "../styles/token.css";
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {

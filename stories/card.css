@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 12px 12px;
+  border: 1px solid tomato;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-sm);
+  transition: box-shadow 0.2s ease-in;
+}
+
+.color-primary {
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.color-secondary {
+  color: #fff;
+  background: var(--color-secondary);
+}
+
+.sizes-sm {
+  min-height: 45px;
+}
+.size-lg {
+  min-height: 115px;
+}
