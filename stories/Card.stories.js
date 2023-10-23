@@ -6,7 +6,19 @@ export default {
   component: Card,
 };
 
-export const Default = () => <Card />;
+const Template = (args) => <Card {...args} />;
+
+export const Default = () => Template.bind({});
+
+export const clickable = Template.bind({});
+clickable.args = {
+  isClickable: true,
+};
+
+export const Draggable = Template.bind({});
+Draggable.args = {
+  isDraggable: true,
+};
 
 export const Colors = () =>
   options.colors.map((color, index) => {
