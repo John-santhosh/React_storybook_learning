@@ -1,10 +1,15 @@
 import PropTypes from "prop-types";
-import { options } from "./constants";
 import "./card.css";
 import classNames from "classnames";
 
+export const options = {
+  colors: ["primary", "secondary"],
+  sizes: ["sm", "lg"],
+};
+
 export const Card = ({
-  children = "I'm card",
+  // do not do like this
+  children, //= "I'm card",
   color = "primary",
   size = "sm",
   isClickable,
@@ -31,5 +36,6 @@ Card.propTypes = {
   isDraggable: PropTypes.bool,
   isClickable: PropTypes.bool,
 };
+console.log(options);
 
 export default Card;

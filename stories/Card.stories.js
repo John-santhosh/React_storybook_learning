@@ -1,9 +1,38 @@
-import Card from "./Card";
-import { options } from "./constants";
+import Card, { options } from "./Card";
 
 export default {
   title: "Card",
   component: Card,
+  args: {
+    children: "Iam a card by default in the stories(default)",
+  },
+  argTypes: {
+    color: {
+      description: "**options:**",
+      table: {
+        type: {
+          summary: options.colors,
+        },
+      },
+      control: {
+        // type of input like select dropdown, radio button
+        type: "select",
+        options: options.colors,
+      },
+    },
+    size: {
+      description: "**options:**",
+      table: {
+        type: {
+          summary: options.sizes,
+        },
+      },
+      control: {
+        type: "select",
+        options: options.sizes,
+      },
+    },
+  },
 };
 
 const Template = (args) => <Card {...args} />;
@@ -17,7 +46,7 @@ const ListTemplate = ({ items, ...args }) => {
   });
 };
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 
 export const clickable = Template.bind({});
 clickable.args = {
@@ -32,8 +61,7 @@ Draggable.args = {
 //the loop is because we could have multiple colors for a button and sizes. we are gonna replace this using listTemplate
 export const Colors = ListTemplate.bind({});
 Colors.args = {
-  items: options.colors.map((color) => ({ color: color })),
-  testArgs: "testing",
+  items: options.colors.map((color) => ({ color })),
 };
 
 export const Sizes = ListTemplate.bind({});

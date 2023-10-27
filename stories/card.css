@@ -6,7 +6,7 @@
   border: 1px solid tomato;
   border-radius: 10px;
   box-shadow: var(--box-shadow-sm);
-  transition: box-shadow 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .color-primary {
@@ -33,4 +33,12 @@
 .is-draggable {
   cursor: grab;
   user-select: none;
+  width: 30%;
+  /* height: 200px; */
+  background-color: dodgerblue;
+  border-color: transparent;
+}
+
+.is-draggable:hover {
+  background-color: rgb(114, 184, 255);
 }
